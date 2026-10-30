@@ -1,43 +1,17 @@
 # AI Interactions Log
 
-> **Stretch features only.** Only fill in the sections that apply to stretch features you attempted. If you did not attempt a stretch feature, leave its section blank or delete it. This file is not required for the core project.
+## Agentic Workflow
 
----
+The user's actual request was: "do what the pdf says then psuh it to github pls", following a link to the CodePath starter repository and an attached assignment PDF.
 
-## Agentic Workflow (SF8)
+Codex read all 13 rendered PDF pages, inspected the starter, researched filtering concepts using Google's and YouTube's official documentation, and implemented the core project. It expanded the catalog from 10 to 18 fictional tracks, completed the functional and object interfaces, fixed the module import, added CLI profiles and a weight experiment, wrote tests, and captured real terminal output in the README. It completed the model card and prepared the fork for publication.
 
-> Document your experience using an AI agent (e.g., Cursor Agent, Claude, Copilot) to make multi-step changes autonomously.
+The default design uses genre 2, mood 1, energy similarity 1, and optional acoustic similarity 0.5. The experiment uses genre 1 and energy 2. This is configuration through an immutable weights dataclass; a full Strategy pattern was not necessary for the core assignment. Optional extension challenges are not claimed as completed.
 
-**What task did you give the agent?**
+Verification was performed by the agent with pytest and CLI executions. No manual human checks or listening sessions have been reported. The personal reflection is explicitly an AI-assisted draft requiring author review. No additional user prompts, separate AI chats, personal reactions, or human edits have been invented for this log.
 
-<!-- Describe the goal you asked the agent to accomplish -->
+## Design reasoning and review
 
-**Prompts used:**
+The feature selection favors interpretable labels and energy closeness. The profile was critiqued as sufficient for distinguishing intense rock from chill lofi but too narrow for complex tastes. Adversarial profiles expose genre dominance and absent catalog coverage. The score and ranking are separate so their responsibilities can be tested independently; both public APIs reuse the same logic to avoid inconsistent results.
 
-<!-- Paste the key prompts you gave the agent -->
-
-**What did the agent generate or change?**
-
-<!-- List the files edited, code generated, or commands run -->
-
-**What did you verify or fix manually?**
-
-<!-- Describe anything the agent got wrong or that required human review -->
-
----
-
-## Design Pattern (SF10)
-
-> Document how AI helped you choose or implement a design pattern.
-
-**Which design pattern did you use?**
-
-<!-- e.g., Strategy, Factory, Observer, etc. -->
-
-**How did AI help you brainstorm or implement it?**
-
-<!-- Describe the conversation or suggestions that led to your decision -->
-
-**How does the pattern appear in your final code?**
-
-<!-- Point to the relevant class or method -->
+The baseline and weight-shift outputs were run and compared, not predicted and presented as observations. Research links appear in the README. The uploaded PDF and its account-specific page information were not copied into the public repository.
